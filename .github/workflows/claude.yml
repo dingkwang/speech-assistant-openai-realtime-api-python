@@ -20,20 +20,20 @@ jobs:
           # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Optional: set execution mode (default: tag)
-          # mode: "tag"
+          mode: "tag"
           # Optional: add custom trigger phrase (default: @claude)
-          # trigger_phrase: "/claude"
+          trigger_phrase: "/claude"
           # Optional: add assignee trigger for issues
-          # assignee_trigger: "claude"
+          assignee_trigger: "claude"
           # Optional: add label trigger for issues
-          # label_trigger: "claude"
+          label_trigger: "claude"
           # Optional: add custom environment variables (YAML format)
           # claude_env: |
           #   NODE_ENV: test
           #   DEBUG: true
           #   API_URL: https://api.example.com
           # Optional: limit the number of conversation turns
-          # max_turns: "5"
+          max_turns: "5"
           # Optional: grant additional permissions (requires corresponding GitHub token permissions)
-          # additional_permissions: |
-          #   actions: read
+          additional_permissions: |
+            actions: read
