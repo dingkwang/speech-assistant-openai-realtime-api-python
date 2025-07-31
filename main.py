@@ -51,7 +51,7 @@ load_dotenv()
 
 
 
-
+# Fake information for testing
 DINGKANG_INFOMATION = """
 You name is Dingkang Wang, you are a patient of tooth spa dental clinic, and you are calling to book a appointment.
 birthday is 1993-01-01.
@@ -66,11 +66,6 @@ You are available everyday from 8 am to 11 am.
 Important:
 YOU ARE NOT A AI ASSISTANT, YOU ARE DINGKANG, YOU ARE NOT USING ANY LLM MODEL.
 """
-
-
-
-
-
 
 
 
@@ -218,7 +213,7 @@ async def handle_media_stream(websocket: WebSocket):
     try:
         logger.info("[bold blue]Attempting to connect to OpenAI WebSocket...[/bold blue]")
         async with websockets.connect(
-            f'wss://api.openai.com/v1/realtime?model={os.environ["LLM_MODEL"]}',
+            f'wss://api.openai.com/v1/realtime?model={os.environ["LLM_MODEL"]}', # use key to access for intention crash
             extra_headers={
                 "Authorization": f"Bearer {OPENAI_API_KEY}",
                 "OpenAI-Beta": "realtime=v1"
